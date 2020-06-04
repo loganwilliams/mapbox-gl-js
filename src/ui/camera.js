@@ -963,8 +963,8 @@ class Camera extends Evented {
                     ? this._normalizeBearing(options.bearing, startBearing)
                     : startBearing,
             pitch = "pitch" in options ? +options.pitch : startPitch,
-            padding = "padding" in options ? options.padding : tr.padding;
-        fov = "fov" in options ? +options.fov : startFov;
+            padding = "padding" in options ? options.padding : tr.padding,
+            fov = "fov" in options ? +options.fov : startFov;
 
         const offsetAsPoint = Point.convert(options.offset);
         let pointAtOffset = tr.centerPoint.add(offsetAsPoint);
@@ -1187,6 +1187,7 @@ class Camera extends Evented {
                 "bearing",
                 "pitch",
                 "around",
+                "fov"
             ]): CameraOptions);
             return this.jumpTo(coercedOptions, eventData);
         }

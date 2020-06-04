@@ -394,6 +394,10 @@
     "promoteId": {
       "type": "promoteId",
       "doc": "A property to use as a feature id (for feature state). Either a property name, or an object of the form `{<sourceLayer>: <propertyName>}`."
+    },
+    "fullResponse": {
+      "type": "*",
+      "doc": "The router API response from a navigation request"
     }
   },
   "source_video": {
